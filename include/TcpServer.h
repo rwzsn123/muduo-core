@@ -72,9 +72,8 @@ private:
     WriteCompleteCallback writeCompleteCallback_; // 消息发送完成后的回调
 
     ThreadInitCallback threadInitCallback_; // loop线程初始化的回调
-
+    int numThreads_;//线程池中线程的数量。
     std::atomic_int started_;
-
     int nextConnId_;
     ConnectionMap connections_; // 保存所有的连接
 };
