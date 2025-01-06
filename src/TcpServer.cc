@@ -48,7 +48,8 @@ TcpServer::~TcpServer()
 // 设置底层subloop的个数
 void TcpServer::setThreadNum(int numThreads)
 {
-    threadPool_->setThreadNum(numThreads);
+    int numThreads_=numThreads;
+    threadPool_->setThreadNum(numThreads_);
 }
 
 // 开启服务器监听
@@ -65,7 +66,7 @@ void TcpServer::start()
 void TcpServer::newConnection(int sockfd, const InetAddress &peerAddr)
 {
     // 轮询算法 选择一个subLoop 来管理connfd对应的channel
-    EventLoop *ioLoop = threadPool_->getNextLoop();
+    EventLoop *ioLoop = threadPool_->getNextLoop(peerAddr.toIp());
     char buf[64] = {0};
     snprintf(buf, sizeof buf, "-%s#%d", ipPort_.c_str(), nextConnId_);
     ++nextConnId_;  // 这里没有设置为原子类是因为其只在mainloop中执行 不涉及线程安全问题
