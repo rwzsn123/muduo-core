@@ -1,7 +1,7 @@
 #include <string>
 
-#include <TcpServer.h>
-#include <Logger.h>
+#include "TcpServer.h"
+#include "Logger.h"
 
 class EchoServer
 {
@@ -46,14 +46,14 @@ private:
         conn->send(msg);
         // conn->shutdown();   // 关闭写端 底层响应EPOLLHUP => 执行closeCallback_
     }
-
-    EventLoop *loop_;
     TcpServer server_;
+    EventLoop *loop_;
+
 };
 
 int main() {
     EventLoop loop;
-    InetAddress addr(8002);
+    InetAddress addr(8080);
     EchoServer server(&loop, addr, "EchoServer");
     server.start();
     loop.loop();

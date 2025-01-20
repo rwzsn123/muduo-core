@@ -9,9 +9,9 @@
 
 ## 开发环境
 
-* linux kernel version 5.15.0(ubuntu 20.04.6)
-* gcc version 9.4.0
-* cmake version 3.26.4
+* linux kernel version5.15.0-113-generic (ubuntu 22.04.6)
+* gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+* cmake version 3.22.1
 
 ## 并发模型
 
@@ -28,29 +28,41 @@
 
 ## 构建项目
 
-安装Cmake
+安装基本工具
 
 ```shell
 sudo apt-get update
-sudo apt-get install cmake
+sudo apt-get install -y wget cmake build-essential unzip git
 ```
 
+
+## 编译器指令
 下载项目
 
 ```shell
 git clone https://github.com/youngyangyang04/muduo-core.git
 ```
 
-进行到muduo-core文件
+进入到muduo-core文件
 ```shell
 cd muduo-core
 ```
 
-执行脚本构建项目，别忘记先增加
-
+创建build文件夹，并且进入build文件:
 ```shell
-chmod +x build.sh && ./build.sh
+mkdir build && cd build
 ```
+
+然后生成可执行程序文件：
+```shell
+cmake .. && make -j${nproc}
+```
+
+运行程序，进入example文件夹，并且执行可执行程序
+```shell
+cd example  &&  ./testserver
+```
+
 
 ## 功能介绍
 
