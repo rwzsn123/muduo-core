@@ -1,7 +1,7 @@
 #include <string>
 
-#include "muduo-core/TcpServer.h"
-#include "muduo-core/Logger.h"
+#include "TcpServer.h"
+#include "Logger.h"
 
 class EchoServer
 {
