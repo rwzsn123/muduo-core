@@ -9,9 +9,9 @@
 
 ## 开发环境
 
-* linux kernel version 5.15.0(ubuntu 20.04.6)
-* gcc version 9.4.0
-* cmake version 3.26.4
+* linux kernel version5.15.0-113-generic (ubuntu 22.04.6)
+* gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+* cmake version 3.22.1
 
 ## 并发模型
 
