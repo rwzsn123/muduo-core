@@ -36,7 +36,8 @@ sudo apt-get install -y wget cmake build-essential unzip git
 ```
 
 
-## 编译器指令
+## 编译指令
+
 下载项目
 
 ```shell
