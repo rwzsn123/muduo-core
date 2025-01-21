@@ -11,7 +11,7 @@
 
 * linux kernel version5.15.0-113-generic (ubuntu 22.04.6)
 * gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
-* cmake version 3.22.1
+* cmake version 3.22
 
 ## 并发模型
 
