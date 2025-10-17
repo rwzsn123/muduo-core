@@ -1,7 +1,7 @@
 # muduo-core
 
 
-//> ⭐️ 在 [网络库项目专栏](https://www.programmercarl.com/other/project_muduo.html) 里详细讲解：项目前置知识 + 项目细节 + 代码解读 + 项目难点 + 面试题与回答 + 简历写法 + 项目拓展。 
+
 ## 项目介绍
 
 本项目是参考 muduo 实现的基于 多Reactor 模型的多线程网络库。使用 C++ 11 编写去除 muduo 对 boost 的依赖。
